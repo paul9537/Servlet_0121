@@ -25,12 +25,5 @@ public class ServletEx01Controller extends HttpServlet {
 		String formatString = formatter.format(now);
 		
 		out.println(formatString);
-		
-		
-		
 	}
-	
-	
-	
-	
 }
