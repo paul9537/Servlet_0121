@@ -9,20 +9,35 @@
 <body>
 <%
 	request.setCharacterEncoding("utf-8");
+
+	String[] foods = request.getParameterValues("food");
+	// 민트초코, 하와이안피자
+	String foodString = "";
+	for(int i = 0; i < foods.length; i++) {
+		foodString += foods[i] + ",";
+	}
+	
 %>
 
 	<table border="1">
 		<tr>
 			<th>별명</th>
-			<td><%= request.getParameter("nickname") %></td>
+			<td> <%= request.getParameter("nickname") %></td>
 		</tr>
+		
 		<tr>
 			<th>동물</th>
 			<td> <%= request.getParameter("animal") %></td>
 		</tr>
+		
 		<tr>
 			<th>음식</th>
-			<td> <%= request.getParameter("food") %></td>
+			<td> <%= foodString %></td>
+		</tr>
+		
+		<tr>
+			<th>과일</th>
+			<td> <%= request.getParameter("fruit") %></td>
 		</tr>
 	</table>
 
