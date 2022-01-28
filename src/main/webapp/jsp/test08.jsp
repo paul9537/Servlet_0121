@@ -75,15 +75,13 @@ list.add(map);
 			</tr>
 		</thead>
 		<tbody>
-			<%for(Map<String, Object> books : list) {
-				
-				%>
+			<% for(Map<String, Object> books : list) { %>
 			<tr>
 				<td><%= books.get("id") %></td>
-				<td><img src=<%= books.get("image") %> width="100px"></td>
-				<td><a href="" class="text-primary display-4"><%= books.get("title") %></a></td>
+				<td><img src=<%= books.get("image") %> width="100px" alt="<%= books.get("title") %>"></td>
+				<td><a href="/jsp/test08_2.jsp?id=<%= books.get("id") %>" class="text-primary display-4"><%= books.get("title") %></a></td>
 			</tr>
-			<%} %>
+			<% } %>
 		</tbody>
 	</table>
 </div>
